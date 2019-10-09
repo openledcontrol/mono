@@ -1,0 +1,24 @@
+{
+  "name": "@openledcontrol/rest",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Klingmann <dan@thatwhiteeyebrowguy.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.7.11",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "@openledcontrol/core": "0.0.0"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}

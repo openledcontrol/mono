@@ -1,0 +1,12 @@
+[Core]
+Plugins = [
+  "@openledcontrol/raspberrypi",
+  "@openledcontrol/rest"
+]
+
+[Core.LedStrip]
+Length = 60
+ColorOrder = "grb"
+MaximumBrightness = 255
+DMA = 10
+GPIO = 18

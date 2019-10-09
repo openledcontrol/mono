@@ -1,0 +1,27 @@
+{
+  "name": "@openledcontrol/raspberrypi",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/raspberry-pi-plugin.js",
+  "types": "lib/raspberry-pi-plugin.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "tsc"
+  },
+  "author": "Daniel Klingmann <dan@thatwhiteeyebrowguy.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.7.11",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@openledcontrol/core": "^0.0.0"
+  },
+  "optionalDependencies": {
+    "rpi-ws281x": "1.0.29"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
