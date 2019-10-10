@@ -6,6 +6,11 @@ Plugins = [
 
 [Core.LedStrip]
 Length = 60
+
+[REST]
+Port = 8081
+
+[RaspberryPi]
 ColorOrder = "grb"
 MaximumBrightness = 255
 DMA = 10
