@@ -14,8 +14,8 @@
     "lib"
   ],
   "paths": {
-    "@openledcontrol/*": [
-      "packages/*"
-     ]
+    "@openledcontrol/core": ["packages/core"],
+    "@openledcontrol/raspberrypi": ["packages/raspberrypi"],
+    "@openledcontrol/rest": ["packages/rest"]
   }
 }
