@@ -1,7 +1,8 @@
 [Core]
 Plugins = [
-  "@openledcontrol/raspberrypi",
-  "@openledcontrol/rest"
+  "@openledcontrol/rest",
+  "@openledcontrol/gitlab",
+#  "@openledcontrol/raspberrypi"
 ]
 
 [Core.LedStrip]
@@ -15,3 +16,17 @@ ColorOrder = "grb"
 MaximumBrightness = 255
 DMA = 10
 GPIO = 18
+
+[GitLab]
+# Put your API token here
+# Token = ""
+
+# If your host differs from the hosted gitlab instance you need
+# to specify the host here.
+# Host = "gitlab.com"
+UpdateInterval = 15000
+Projects = [
+  1,
+  2,
+  3
+]

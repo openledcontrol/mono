@@ -1,0 +1,25 @@
+{
+  "name": "@openledcontrol/gitlab",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Klingmann <dan@thatwhiteeyebrowguy.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/gitlab": "^2.0.0",
+    "@types/node": "^12.7.11",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "@openledcontrol/core": "0.0.0",
+    "chromatism": "^3.0.0",
+    "gitlab": "^11.3.1"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
