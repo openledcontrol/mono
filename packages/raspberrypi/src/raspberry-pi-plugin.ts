@@ -20,39 +20,49 @@ interface WS281XConfig {
   strip: string;
 }
 
+interface RaspberryPiConfiguration {
+  ColorOrder?: 'rgb' | 'rbg' | 'brg' | 'bgr' | 'grb' | 'gbr';
+  DMA?: number;
+  GPIO?: number;
+}
+
+interface RaspberryPiConfigurationFile extends ConfigurationFile {
+  RaspberryPi?: RaspberryPiConfiguration;
+}
+
 export default class RaspberryPiPlugin {
 
   private ledStrip: LEDStrip;
   private pluginRegistry: { [ k: string ]: LEDPlugin };
-  private configurationFile: ConfigurationFile;
+  private configurationFile: RaspberryPiConfigurationFile;
 
   private stripConfiguration: WS281XConfig;
 
   constructor(
     ledStrip: LEDStrip,
     pluginRegistry: { [ k: string ]: LEDPlugin },
-    configurationFile: ConfigurationFile) {
+    configurationFile: RaspberryPiConfigurationFile) {
       this.ledStrip = ledStrip;
       this.pluginRegistry = pluginRegistry;
       this.configurationFile = configurationFile;
+
+      if (!configurationFile.RaspberryPi) {
+        throw new Error('You need to configure the RaspberryPi plugin. Please check the README.md for instructions.');
+      }
 
       const capabilities = this.ledStrip.getCapabilities();
 
       this.stripConfiguration = {
         leds: capabilities.ledCount,
-        dma: configurationFile.Core.LedStrip.DMA,
+        dma: configurationFile.RaspberryPi.DMA || 10,
         brightness: configurationFile.Core.LedStrip.MaximumBrightness,
-        gpio: configurationFile.Core.LedStrip.GPIO,
-        strip: configurationFile.Core.LedStrip.ColorOrder
+        gpio: configurationFile.RaspberryPi.GPIO || 18,
+        strip: configurationFile.RaspberryPi.ColorOrder || 'grb'
       }
 
       this.ledStrip.addListener('render', this.render.bind(this));
 
       ws281x.configure(this.stripConfiguration);
-  }
-
-  run() {
-
   }
 
   render() {

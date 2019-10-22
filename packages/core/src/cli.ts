@@ -25,12 +25,9 @@ export function run() {​
     throw new Error('no_plugins_sett');
   }
 
-  logger.log('info', `Creating LED Strip instance with ${ledStripConfig.Length} LEDs and ${ledStripConfig.ColorOrder} color order`, { label: 'CORE' });
+  logger.log('info', `Creating LED Strip instance with ${ledStripConfig.Length} LEDs`, { label: 'CORE' });
   const ledStripInstance = new LEDStrip({
     ledCount: ledStripConfig.Length,
-    colorOrder: ledStripConfig.ColorOrder,
-    dma: ledStripConfig.DMA,
-    gpioPin: ledStripConfig.GPIO,
     maximumBrightness: ledStripConfig.MaximumBrightness,
     reverse: ledStripConfig.Reverse
   });
