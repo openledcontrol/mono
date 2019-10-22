@@ -1,7 +1,7 @@
 [Core]
 Plugins = [
 #  "@openledcontrol/rest",
-  "@openledcontrol/gitlab",
+#  "@openledcontrol/gitlab",
 #  "@openledcontrol/raspberrypi"
 ]
 

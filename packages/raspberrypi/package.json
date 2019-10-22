@@ -2,11 +2,15 @@
   "name": "@openledcontrol/raspberrypi",
   "version": "0.0.0",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "github:openledcontrol/mono"
+  },
   "main": "lib/raspberry-pi-plugin.js",
   "types": "lib/raspberry-pi-plugin.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "tsc"
+    "build": "tsc",
+    "build:watch": "tsc -w"
   },
   "author": "Daniel Klingmann <dan@thatwhiteeyebrowguy.com>",
   "license": "MIT",

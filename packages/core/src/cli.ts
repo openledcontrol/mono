@@ -22,7 +22,7 @@ export function run() {​
 
   if (!plugins) {
     logger.log('error', 'No plugins were set. This tool is useless without plugins. Why not install some?', { label: 'CORE' });
-    throw new Error('no_plugins_set');
+    throw new Error('no_plugins_sett');
   }
 
   logger.log('info', `Creating LED Strip instance with ${ledStripConfig.Length} LEDs and ${ledStripConfig.ColorOrder} color order`, { label: 'CORE' });

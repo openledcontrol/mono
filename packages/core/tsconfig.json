@@ -8,5 +8,6 @@
     "outDir": "./lib",
     "declaration": true
   },
+  "compileOnSave": true,
   "exclude": [ "lib" ]
 }

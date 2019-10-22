@@ -1,13 +1,19 @@
 {
   "name": "@openledcontrol/core",
   "version": "0.0.0",
-  "description": "",
+  "description": "Core utils of openledcontrol needed by every plugin",
+  "repository": {
+    "type": "git",
+    "url": "github:openledcontrol/mono"
+  },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "bin": "./bin/openledcontrol",
+  "bin": {
+    "openledcontrol": "./bin/openledcontrol"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "tsc"
+    "build": "tsc",
+    "build:watch": "tsc -w"
   },
   "author": "Daniel Klingmann <dan@thatwhiteeyebrowguy.com>",
   "license": "MIT",
@@ -25,6 +31,7 @@
     "@openledcontrol/rest": "^0.0.0"
   },
   "files": [
-    "lib/**/*"
+    "lib/**/*",
+    "bin/**/*"
   ]
 }

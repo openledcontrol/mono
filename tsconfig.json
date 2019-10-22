@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "moduleResolution": "node"
   },
+  "compileOnSave": true,
   "exclude": [
     "node_modules",
     "lib"
