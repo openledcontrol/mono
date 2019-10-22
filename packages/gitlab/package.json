@@ -1,6 +1,6 @@
 {
   "name": "@openledcontrol/gitlab",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add GitLab pipeline support to openledcontrol",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@openledcontrol/core": "^0.0.1",
+    "@openledcontrol/core": "^0.0.2",
     "chromatism": "^3.0.0",
     "gitlab": "^11.3.1"
   },
