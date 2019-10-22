@@ -72,9 +72,11 @@ export default class RestPlugin {
 
   private reset(req: express.Request, res: express.Response) {
     this.ledStrip.reset();
+    return res.end();
   }
 
   private postRender(req: express.Request, res: express.Response) {
     this.ledStrip.render();
+    return res.end();
   }
 }
