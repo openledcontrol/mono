@@ -23,8 +23,6 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "@openledcontrol/raspberrypi": "^0.0.1",
-    "@openledcontrol/rest": "^0.0.1",
     "chromatism": "^3.0.0",
     "toml": "^3.0.0",
     "ts-node": "^8.4.1",
@@ -33,5 +31,6 @@
   "files": [
     "lib/**/*",
     "bin/**/*"
-  ]
+  ],
+  "gitHead": "33d85582a773f12bd4877cfcb09c8c603d001157"
 }
