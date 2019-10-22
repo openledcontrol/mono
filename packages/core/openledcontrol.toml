@@ -1,12 +1,13 @@
 [Core]
 Plugins = [
-  "@openledcontrol/rest",
+#  "@openledcontrol/rest",
   "@openledcontrol/gitlab",
 #  "@openledcontrol/raspberrypi"
 ]
 
 [Core.LedStrip]
 Length = 60
+Reverse = true
 
 [REST]
 Port = 8081
@@ -23,7 +24,7 @@ GPIO = 18
 
 # If your host differs from the hosted gitlab instance you need
 # to specify the host here.
-# Host = "gitlab.com"
+# Host = "https://gitlab.com"
 UpdateInterval = 15000
 Projects = [
   1,

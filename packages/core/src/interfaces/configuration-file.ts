@@ -9,6 +9,7 @@ export interface LEDStripConfigurationFile {
   MaximumBrightness: number;
   DMA: number;
   GPIO: number;
+  Reverse: boolean;
 }
 
 export interface ConfigurationFile {

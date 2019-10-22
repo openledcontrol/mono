@@ -30,9 +30,11 @@ export class LEDStrip extends EventEmitter {
       throw new Error('INDEX_OUT_OF_BOUNDS');
     }
 
+    const actualIndex: number = this.configuration.reverse ? this.configuration.ledCount - 1 - index : index;
+
     const { r, g, b } = chromatism.convert(color).rgb;
-    this.ledStatus[ index ] = [ r, g, b ];
-    this.ledByteArray[ index ] = (Math.floor(r) << 16) | (Math.floor(g) << 8)| Math.floor(b);
+    this.ledStatus[ actualIndex ] = [ r, g, b ];
+    this.ledByteArray[ actualIndex ] = (Math.floor(r) << 16) | (Math.floor(g) << 8)| Math.floor(b);
   }
 
   /**
@@ -45,7 +47,7 @@ export class LEDStrip extends EventEmitter {
       throw new Error('INDEX_OUT_OF_BOUNDS');
     }
 
-    return this.ledStatus[ index ];
+    return this.ledStatus[ this.configuration.reverse ? this.configuration.ledCount - 1 - index : index ];
   }
 
   /**

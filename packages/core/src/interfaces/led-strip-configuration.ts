@@ -17,4 +17,7 @@ export interface LEDStripConfiguration {
   // RGBW strips are not currently supported.
   // Defaults to 'grb'
   colorOrder?: string;
+
+  // Defaults to false
+  reverse?: boolean;
 }

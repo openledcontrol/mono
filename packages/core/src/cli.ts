@@ -31,7 +31,8 @@ export function run() {​
     colorOrder: ledStripConfig.ColorOrder,
     dma: ledStripConfig.DMA,
     gpioPin: ledStripConfig.GPIO,
-    maximumBrightness: ledStripConfig.MaximumBrightness
+    maximumBrightness: ledStripConfig.MaximumBrightness,
+    reverse: ledStripConfig.Reverse
   });
 
   const pluginRegistry: { [ k: string ]: LEDPlugin } = {};
