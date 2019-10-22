@@ -1,6 +1,6 @@
 {
   "name": "@openledcontrol/rest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Adds a REST API to your lightstrip",
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
-    "express": "4.17.1",
-    "@openledcontrol/core": "0.0.0"
+    "@openledcontrol/core": "^0.0.1",
+    "express": "4.17.1"
   },
   "files": [
     "lib/**/*"

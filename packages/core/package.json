@@ -1,6 +1,6 @@
 {
   "name": "@openledcontrol/core",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Core utils of openledcontrol needed by every plugin",
   "repository": {
     "type": "git",
@@ -23,12 +23,12 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
+    "@openledcontrol/raspberrypi": "^0.0.1",
+    "@openledcontrol/rest": "^0.0.1",
     "chromatism": "^3.0.0",
     "toml": "^3.0.0",
     "ts-node": "^8.4.1",
-    "winston": "^3.2.1",
-    "@openledcontrol/raspberrypi": "^0.0.0",
-    "@openledcontrol/rest": "^0.0.0"
+    "winston": "^3.2.1"
   },
   "files": [
     "lib/**/*",
